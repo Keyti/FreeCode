@@ -1,0 +1,35 @@
+function palindrome(str) {
+  // Good luck!
+  //string operations - delete the white spaces, non-word characters and "_"
+  str = str.toLowerCase();
+  str = str.replace(/\s+/g, '');
+  str = str.replace(/\W+/g, '');
+   str = str.replace(/_/g, '');
+  
+  //pass str to pal1
+    var pal1 = str;
+  
+  //function - reverse the str
+  function b(string){
+    {
+    var star = pal1.split("");
+  star.reverse();
+  var p2 = star.join("");
+      return p2;
+  }
+  }
+  
+  //pass reversed str to pal2
+  var pal2 = b(str);
+  
+  //check if the strings match
+  if(pal1 != pal2){
+    return false;
+  }else  
+  return true;
+  
+}
+
+
+
+palindrome("eye");
