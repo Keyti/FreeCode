@@ -6,14 +6,17 @@ function mutation(arr) {
   //Slice the general array
   arr1 = arr.slice(0,1);
   arr2 = arr.slice(1,2);
+  
   //Change array into the string
   str1 = arr1.toString();
   str2 = arr2.toString();
+  
   //lower case strings so the .indexOf() can work
   str1 = str1.toLowerCase();
   str2 = str2.toLowerCase();
   
-  var d = 0;
+  var d = 0; //counting appearing of letters of str2
+  
     for(var i = 0; i<str2.length; i++){
       var f = str1.indexOf(str2[i]);
       if(f != -1){
@@ -21,7 +24,7 @@ function mutation(arr) {
       }else{ d=d;}
       }      
 
-  if(d >= str2.length){
+  if(d == str2.length){
     return true;
   }else{
   return false;
