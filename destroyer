@@ -1,0 +1,19 @@
+/*
+  You will be provided with an initial array (the first argument in the destroyer function), followed by one or     more arguments. Remove all elements from the initial array that are of the same value as these arguments.
+*/
+
+function destroyer(arr) {
+  var argu = Array.from(arguments); // make array of all arguments
+  var argum = argu.slice(1); // slice array from arguments and prepare array of elements to delete
+  argu.splice(0,1); // slice with array from arguments
+  
+  return arr.filter(function(element) {
+    return argu.indexOf(element) === -1;
+  });
+}
+
+destroyer([1, 2, 3, 4, 1, 2, 3], 2, 3);
+
+/*
+    With help from StackOverfloww and FreeCodeCamp Wiki
+*/
