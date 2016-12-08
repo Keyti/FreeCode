@@ -1,0 +1,22 @@
+/*
+Remove all falsy values from an array.
+Falsy values in JavaScript are false, null, 0, "", undefined, and NaN.
+*/
+
+function bouncer(arr) {
+  // Don't show a false ID to this bouncer.
+  function isPositive(ar){
+    if(typeof(ar) == 'number' && ar !== null && ar !== 0 && !isNaN(ar) || typeof(ar) == 'string' && ar !== undefined && ar !== "" || typeof(ar) == 'boolean' && ar !== false){
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
+  var arr2 = [];
+  arr2 = arr.filter(isPositive);
+  
+  return arr2;
+}
+
+bouncer([7, "ate", "", false, 9]);
